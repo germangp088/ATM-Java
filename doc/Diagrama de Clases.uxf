@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1000</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Models::DineroDisponible
+--
+-moneda: Moneda
+-cantidad: int
+-valor: int
+--
++DineroDisponible(int cantidad, int valor, Moneda moneda): ctor
++getCantidad(): int
++setCantidad(int cantidad): void
++getValor(): int
++setValor(int valor): void
++getMoneda(): Moneda
++setMoneda(Moneda moneda): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>680</y>
+      <w>150</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Models::Menu
+--
+--INGRESARACC
+--INGRESARNIP
+--MENU
+--SALDO
+--RETIRAR
+--DEPOSITAR
+--SALIR
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1270</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Models::Moneda
+--
+--PESO
+--DOLAR
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1440</y>
+      <w>330</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>1400</y>
+      <w>180</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>950</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>50.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>860</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>950</y>
+      <w>470</w>
+      <h>610</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>450.0;10.0;10.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>1650</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>1220</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>780</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>610</y>
+      <w>550</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Models::ATM
+--
+-menu: Menu
+-instance = null: ATM
+-dineroDisponible = new ArrayList&lt;DineroDisponible&gt;(): ArrayList&lt;DineroDisponible&gt;
+-cliente: Cliente
+-sesion: Sesion
+-mediator: Mediator
+--
++ATM(): ctor
++getInstance(): ATM
++getMenu(): Menu
++setMenu(Menu menu): void
++setDineroDisponible(ArrayList&lt;DineroDisponible&gt; dineroDisponible): void
++getDineroDisponible(): ArrayList&lt;DineroDisponible&gt;
++getCliente(): Cliente
++setCliente(Cliente cliente): void
++getSesion(): Sesion
++setSesion(Sesion sesion): void
++getMediator(): Mediator
++setMediator(Mediator mediator): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>780</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1070</x>
+      <y>720</y>
+      <w>390</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Models::Cliente
+--
+-cuenta: Cuenta
+-apellido: String
+-nombre: String
+--
++Cliente(): ctor
++Cliente(String nombre, String apellido, Cuenta cuenta): ctor
++setNombre(String nombre): void
++getNombre(): String
++setApellido(String apellido): void
++getApellido(): String
++getCuenta(): Cuenta
++setCuenta(Cuenta cuenta): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>1060</y>
+      <w>560</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Models::Banco
+--
+-instance = null: Banco
+-clientes: ArrayList&lt;Cliente&gt;
+-transacciones: ArrayList&lt;Transaccion&gt;
+--
+-Banco(): ctor
++getInstance(): Banco
++agregarCliente(String nombre, String apellido, Cuenta cuenta): void
++agregarTransaccion(Cliente cliente, double monto, Moneda moneda, Date fecha): void
++getCliente(Sesion sesion): Cliente
++getTransacciones(): ArrayList&lt;Transaccion&gt;
++setTransacciones(ArrayList&lt;Transaccion&gt; transacciones): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>1390</y>
+      <w>390</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Models::CuentaCorriente
+--
+--
++CuentaCorriente(int nroCuenta, int NIP, double saldo): ctor
++extraer(double monto, Moneda moneda): void
++getDescripcion(): String
++depositar(double monto, Moneda moneda): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>1350</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Models::CajaAhorro
+--
+--
++CajaAhorro(int nroCuenta, int NIP, double saldo): ctor
++extraer(double monto, Moneda moneda): void
++getDescripcion(): String
++depositar(double monto, Moneda moneda): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>1540</y>
+      <w>330</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>/Models::Cuenta/
+--
+-nroCuenta: int
+-NIP: int
+#saldo: double
+--
++Cuenta(int nroCuenta, int NIP, double saldo): ctor
++toString(): String
++depositar(double monto, Moneda moneda): void
++extraer(double monto, Moneda moneda): void
++getDescripcion(): String
++getNIP(): int
++setNIP(int NIP): void
++setNroCuenta(int nroCuenta): void
++getNroCuenta(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1550</y>
+      <w>510</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Models::Transaccion
+--
+-cliente: Cliente
+-monto: double
+-moneda: Moneda
+-fecha: Date
+--
++Transaccion(Cliente cliente, double monto, Moneda moneda, Date fecha): ctor
++getCliente(): Cliente
++setCliente(Cliente cliente): void
++getMonto(): double
++setMonto(double monto): void
++getMoneda(): Moneda
++setMoneda(Moneda moneda): void
++getFecha(): Date
++setFecha(Date fecha): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>1070</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Models::IValorizado
+--
+--
+~getValor(): int
+~setValor(int valor): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>1110</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>1040</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Models::Sesion
+--
+-nroCuenta: int
+-NIP: int
+--
++getNroCuenta(): int
++setNroCuenta(int nroCuenta): void
++getNIP(): int
++setNIP(int nIP): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>960</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>0</y>
+      <w>640</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>Models::Mediator
+--
+-inicioView: InicioView
+-menuView: MenuView
+-saldoView: SaldoView
+-depositoView: DepositoView
+-retiroView: RetiroView
+--
++Mediator(): ctor
++getInicioView(): InicioView
++setInicioView(InicioView inicioView): void
++errorLogin(): void
++showInit(): void
++showMenu(): void
++showSaldo(): void
++showDeposit(): void
++showRetiro(): void
+-changeVisible(Boolean saldo, Boolean inicio, Boolean menu, Boolean deposito, Boolean retiro): void
++getMenuView(): MenuView
++setMenuView(MenuView menuView): void
++getSaldoView(): SaldoView
++setSaldoView(SaldoView saldoView): void
++getDepositoView(): DepositoView
++setDepositoView(DepositoView depositoView): void
++getRetiroView(): RetiroView
++setRetiroView(RetiroView retiroView): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>440</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
